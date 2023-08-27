@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- note: custom input data fetching as queryselector -->
+<body> 
+    <div class="wrapper">
+    <h2>PASSWORD GENERATOR</h2>
+    <div class="writingSpace">
+        <input type="" readonly placeholder="Password" class="display" data-passwordDisplay>
+        <button class="copyTextBtn" data-copy>
+            <!-- data-copyMsg is custom attribute -->
+          <span class="tooltip" data-copyMsg></span>
+          <img width="23" height="23" src="https://img.icons8.com/ios-glyphs/30/copy.png" alt="copy"/>
+
+        </button>
+    </div>
+    <div class="generator" >
+        <div class="pswdlength">
+        <p>Password Length</p>
+        <p data-lengthNum>0</p>
+    </div>
+    <input type="range" min="1" max="20" value="" class="slider" step="1" data-lengthSlider>
+    <div class="checkBox">
+        <input type="checkbox" name="checkBox" id="uppercase">
+        <label for="uppercase">Include Uppercase Letters</label>
+    </div>
+    <div class="checkBox">
+        <input type="checkbox" name="checkBox" id="lowercase">
+        <label for="lowercase">Include Lowercase Letters</label>
+    </div>
+    <div class="checkBox">
+        <input type="checkbox" name="checkBox" id="numbers">
+        <label for="numbers">Include Number</label>
+    </div>
+    <div class="checkBox">
+        <input type="checkbox" name="checkBox" id="symbols">
+        <label for="symbols">Include Symbols</label>
+    </div>
+    <div class="strength">
+        <p>Strength</p>
+        <div id="circle" data-indicator></div>
+    </div>
+    <!-- Generate Password button -->
+    <button class="generateBtn">GENERATE PASSWORD</button>
+</div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
